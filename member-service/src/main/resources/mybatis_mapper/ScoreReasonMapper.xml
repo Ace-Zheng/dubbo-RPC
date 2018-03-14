@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.dubbo.facade.member.mapper.ScoreReasonMapper" >
+  <resultMap id="BaseResultMap" type="cn.dubbo.facade.member.model.ScoreReason" >
+    <id column="reason_id" property="reason_id" jdbcType="INTEGER" />
+    <result column="reason_type" property="reason_type" jdbcType="CHAR" />
+    <result column="reason_name" property="reason_name" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    reason_id, reason_type, reason_name
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from score_reason
+    where reason_id = #{reason_id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from score_reason
+    where reason_id = #{reason_id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="cn.dubbo.facade.member.model.ScoreReason" >
+    insert into score_reason (reason_id, reason_type, reason_name
+      )
+    values (#{reason_id,jdbcType=INTEGER}, #{reason_type,jdbcType=CHAR}, #{reason_name,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.dubbo.facade.member.model.ScoreReason" >
+    insert into score_reason
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="reason_id != null" >
+        reason_id,
+      </if>
+      <if test="reason_type != null" >
+        reason_type,
+      </if>
+      <if test="reason_name != null" >
+        reason_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="reason_id != null" >
+        #{reason_id,jdbcType=INTEGER},
+      </if>
+      <if test="reason_type != null" >
+        #{reason_type,jdbcType=CHAR},
+      </if>
+      <if test="reason_name != null" >
+        #{reason_name,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.dubbo.facade.member.model.ScoreReason" >
+    update score_reason
+    <set >
+      <if test="reason_type != null" >
+        reason_type = #{reason_type,jdbcType=CHAR},
+      </if>
+      <if test="reason_name != null" >
+        reason_name = #{reason_name,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where reason_id = #{reason_id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.dubbo.facade.member.model.ScoreReason" >
+    update score_reason
+    set reason_type = #{reason_type,jdbcType=CHAR},
+      reason_name = #{reason_name,jdbcType=VARCHAR}
+    where reason_id = #{reason_id,jdbcType=INTEGER}
+  </update>
+</mapper>

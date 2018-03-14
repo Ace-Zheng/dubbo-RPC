@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="soa-api-web"
+  id="myeclipse.1510823944554"
+  context-root="/soa-api-web"
+  j2ee-spec="6.0"
+  archive="soa-api-web.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+ <generatorConfiguration>
+      <classPathEntry
+             location="D:\\mysql-connector-java-5.1.21.jar"/>
+     <context id="my" targetRuntime="MyBatis3">
+         <commentGenerator>
+             <property name="suppressDate" value="false"/>
+             <property name="suppressAllComments" value="true"/>
+         </commentGenerator>
+ 
+         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                         connectionURL="jdbc:mysql://localhost:3306/databox?useUnicode=true&amp;characterEncoding=utf8&amp;zeroDateTimeBehavior=convertToNull" 
+                         userId="root"
+                         password="5201314zlc"/>
+ 
+         <javaModelGenerator targetPackage="cn.com.dubbo.model"
+                             targetProject="soa-api-web">
+             <property name="enableSubPackages" value="true"/>
+             <property name="trimStrings" value="true"/>
+         </javaModelGenerator>
+ 
+         <sqlMapGenerator targetPackage="cn.com.dubbo.mapper"
+                          targetProject="soa-api-web">
+             <property name="enableSubPackages" value="true"/>
+         </sqlMapGenerator>
+ 
+         <javaClientGenerator targetPackage="cn.com.dubbo.mapper"
+                              targetProject="soa-api-web" type="XMLMAPPER">
+             <property name="enableSubPackages" value="true"/>
+         </javaClientGenerator>
+ 
+         <!----><table tableName="card_coupon" domainObjectName="CardCoupon"
+                enableCountByExample="false" enableUpdateByExample="false"
+                enableDeleteByExample="false" enableSelectByExample="false"
+                selectByExampleQueryId="false">
+                <property name="useActualColumnNames" value="true"/>
+                </table>
+ 
+         <!--<table tableName="card_coupon" domainObjectName="card_coupon" />
+         <table tableName="order_item" domainObjectName="Order_item666" /> -->
+     </context>
+ </generatorConfiguration>
