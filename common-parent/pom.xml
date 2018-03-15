@@ -8,21 +8,12 @@
 	<packaging>pom</packaging>
 	<name>common-parent</name>
 	<url>http://maven.apache.org</url>
-<!-- -->
+	<!-- -->
 	<modules>
-		<module>../huimin-common-config</module>
-		<module>../huimin-common-foundation</module>
-		<module>../huimin-common-core</module>
-		<module>../huimin-common-mongo</module>
-		<module>../huimin-common-mq</module>
-		<module>../huimin-common-redis</module>
-		
-		<module>../huimin-facade-customerinfo</module>
-		<module>../huimin-facade-log</module>
-		<module>../huimin-facade-payflow</module>
-		<module>../huimin-facade-product</module>
-		<module>../huimin-facade-saleflow</module>
-		
+		<module>../member-facade</module>
+		<module>../member-service</module>
+		<module>../payflow-facade</module>
+		<module>../payflow-service</module>
 		<module>../soa-api-web</module>
 	</modules>
 

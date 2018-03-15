@@ -8,7 +8,6 @@
 		<version>1.0.0-SNAPSHOT</version>
 		<relativePath>../common-parent</relativePath> 
 	</parent>
-
 	<artifactId>member-service</artifactId>
 	<packaging>jar</packaging>
 	<name>member-service</name>

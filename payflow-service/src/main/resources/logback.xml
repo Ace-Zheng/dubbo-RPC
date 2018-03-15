@@ -7,7 +7,7 @@
 
 	<appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">   
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<FileNamePattern>/data/logs/soa-api-web%d{yyyyMMdd}.log</FileNamePattern>
+			<FileNamePattern>/data/logs/payflow-service%d{yyyyMMdd}.log</FileNamePattern>
 			<MaxHistory>30</MaxHistory>
 		</rollingPolicy>
 		<encoder>
