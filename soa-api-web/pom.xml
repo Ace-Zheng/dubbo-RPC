@@ -11,7 +11,7 @@
 	</parent>
 	
  	<!-- <groupId>soa-api-web</groupId> -->
-	<artifactId>com.wookong</artifactId>
+	<artifactId>soa-api-web</artifactId>
 	<packaging>war</packaging>
 	<name>soa-api-web</name>
 	<url>http://maven.apache.org</url>
